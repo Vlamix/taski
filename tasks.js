@@ -155,7 +155,7 @@ function uni(arr) {
 
     return arr.filter((value, index) => arr.indexOf(value) === index)
 }
-const arrUni = [1,2,3,4,2,5,6,1,3]
+const arrUni = [1, 2, 3, 4, 2, 5, 6, 1, 3]
 console.log(uni(arrUni))
 // 11. Напишите функцию, которая вернет элемент из массива по указанному индексу. Но если индекс отрицательный, то считаем с конца массива
 //
@@ -194,7 +194,7 @@ function group(arr){
 }
 
 console.log(group(arrGroup))
-// 14. Напишите функцию которая преобразует массив в строку через указанный разделитель
+// 14. Напишите функцию которая преобразуе т массив в строку через указанный разделитель
 const arrImplode = ['a', 'b', 'c']
 
 function implode(arr, delimiter) {
@@ -202,3 +202,33 @@ function implode(arr, delimiter) {
 }
 
 console.log(implode(arrImplode,'-'))
+const arrToSort =  [3, 8, 7, 6, 5, -4, 3, 2, 1]
+//19
+function sortMinus(arr) {
+    return arr.sort((a, b) => b - a)
+}
+
+console.log(sortMinus(arrToSort))
+
+//18
+const arrIq = [1, 2, 3, 'd']
+const arrIq2 = [2, 4]
+
+function isEqual(arr1, arr2) {
+
+}
+
+console.log(isEqual(arrIq, arrIq2))
+
+//15
+const arrToFilter = [1, 2, 3, 4, 5, 6, 7]
+
+function perebor(arr, simvol, bool) {
+    if (bool){
+        return arr.filter(value => value % 2 === 0).join(simvol)
+    } else {
+        return arr.filter(value => value % 2 !== 0).join(simvol)
+    }
+}
+
+console.log(perebor(arrToFilter, '*', true))
