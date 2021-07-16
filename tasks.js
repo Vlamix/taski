@@ -7,8 +7,8 @@
 //
 // console.log(pluck(chars, 'name')); // ['tony', 'feel']
 const chars = [
-        { 'name': 'tony', 'age': 20 },
-        { 'name': 'feel', 'age': 30 }
+        { name: 'tony', 'age': 20 },
+        { name: 'feel', 'age': 30 }
     ];
 function pluck(name, obj) {
     const arr = []
@@ -16,7 +16,7 @@ function pluck(name, obj) {
     return arr
 }
 
-console.log(pluck('name', chars))
+console.log(pluck(name, chars))
 //
 // 2. Напишите функцию неглубокого копирования массива, учитывая, что исходный массив может быть произвольной длины, но не глубже массива в массиве
 //
