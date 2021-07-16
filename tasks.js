@@ -94,11 +94,19 @@ console.log(arr2)
 //
 // console.log(rm([1, 2, 3], 0)); // [1, 2, 3]
 function rm(arr, el) {
-    return arr.map()
+    arr.splice(0, el)
+    return arr
 }
+const arrDel = [1, 2, 3, 4]
+console.log(rm(arrDel, 2) )
 // 7. Аналогично заданию 6, только удаление с конца массива
 //
-//
+function rmRev(arr, el) {
+    arr.reverse().splice(0, el)
+    return arr.reverse()
+}
+const arrDelRev = [1, 2, 3, 4]
+console.log(rmRev(arrDelRev, 2) )
 // 8. Написать функцию, которая принимает массив, символ для замены, с какой ячейки начинать заменять и на какой остановиться. Если номера ячеек не заданы, то по умолчанию это начало и конец всего массива
 //
 // const arr1 = [1, 2, 3];
@@ -182,9 +190,7 @@ console.log(
 //
 const arrGroup = [['a', 'b'], [1, 2], [true, false]]
 function group(arr){
-    return arr.map((value, index) => {
-        arr[index].map((value1, index1) => arr[index][index1])
-    })
+
 }
 
 console.log(group(arrGroup))
